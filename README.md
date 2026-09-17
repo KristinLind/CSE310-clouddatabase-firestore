@@ -17,7 +17,7 @@ I wanted to build this to get hands-on with a new cloud database and see
 how its document-based structure compares to relational or other NoSQL
 systems I've used before.
 
-[Software Demo Video](https://www.youtube.com/watch?v=UO_tYknMTb0) 
+[Software Demo Video](https://us06web.zoom.us/rec/play/6VZqib4wV7Hfl3-JXQR4bHhJbkls2w17nV_S_Lzy36OVSy54kIYEuOeiqNUsmdzU_BYvZv86_C74YgBU.iw3lG851pxoWLEdf?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fus06web.zoom.us%2Frec%2Fshare%2FyMM3osffgs7imLRRmYp01HN6yQa3FeHw7tmAHSvssu_z8iksUtItt6Sk_3Huq2gq.6zbrptYARuFdUQjZ) 
 
 # Cloud Database
 
