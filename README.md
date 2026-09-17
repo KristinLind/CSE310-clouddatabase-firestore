@@ -50,3 +50,5 @@ firebase-admin library to connect to and interact with Firestore.
 
 - Add input validation to prevent duplicate or empty client/project entries
 - Let the user select a record by number from the displayed list instead of copying the long document ID
+- Restructure data so multiple projects can be grouped under a single
+client instead of creating a separate, unlinked document each time
