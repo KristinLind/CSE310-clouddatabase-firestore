@@ -27,18 +27,56 @@ def add_client_project():
 
 def view_clients_projects():
     """Displays all clients/projects currently stored in Firestore."""
-    print("\n(View feature coming soon)\n")
+    docs = db.collection("clients").stream()
+
+    print("\n=== All Clients & Projects ===")
+    found_any = False
+
+    for doc in docs:
+        found_any = True
+        data = doc.to_dict()
+        print(f"ID: {doc.id}")
+        print(f"  Client: {data.get('client_name')}")
+        print(f"  Project: {data.get('project_name')}")
+        print(f"  Status: {data.get('status')}")
+        print()
+
+    if not found_any:
+        print("No clients or projects found.\n")
 
 
 def update_project_status():
     """Updates the status field of an existing client/project."""
-    print("\n(Update feature coming soon)\n")
+    # Show everything first so the user can find the right document ID
+    view_clients_projects()
 
+    doc_id = input("Enter the ID of the client/project to update: ")
+    new_status = input("Enter the new status: ")
+
+    doc_ref = db.collection("clients").document(doc_id)
+
+    # Check the document actually exists before trying to update it
+    if doc_ref.get().exists:
+        doc_ref.update({"status": new_status})
+        print(f"\nStatus updated to '{new_status}'.\n")
+    else:
+        print("\nNo client/project found with that ID.\n")
 
 def delete_client_project():
     """Removes a client/project from the 'clients' collection."""
-    print("\n(Delete feature coming soon)\n")
+    # Show everything first so the user can find the right document ID
+    view_clients_projects()
 
+    doc_id = input("Enter the ID of the client/project to delete: ")
+
+    doc_ref = db.collection("clients").document(doc_id)
+
+    # Check the document actually exists before trying to delete it
+    if doc_ref.get().exists:
+        doc_ref.delete()
+        print(f"\nDeleted document {doc_id}.\n")
+    else:
+        print("\nNo client/project found with that ID.\n")
 
 def main():
     """Runs the console menu loop for the Client & Project Tracker."""

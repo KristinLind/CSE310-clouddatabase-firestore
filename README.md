@@ -40,13 +40,13 @@ firebase-admin library to connect to and interact with Firestore.
 
 # Useful Websites
 
-{Add the sites you actually used as you go — a couple to start, based on your plan:}
-
 - [Firebase Firestore Documentation](https://firebase.google.com/docs/firestore)
 - [firebase-admin Python SDK Documentation](https://firebase.google.com/docs/reference/admin/python)
+- [Cloud Database using Firestore](https://www.youtube.com/watch?v=v_hR4K4auoQ)
+- [What is Firestore](https://www.youtube.com/watch?v=moglAjmwmUQ)
+
 
 # Future Work
 
-- Add input validation so the program doesn't break on bad or empty input
-- Clean up the console menu formatting for readability
-- {Add anything else you find yourself wanting to fix as you build}
+- Add input validation to prevent duplicate or empty client/project entries
+- Let the user select a record by number from the displayed list instead of copying the long document ID
